@@ -1,5 +1,5 @@
 h1 {
-  color: #6892d5;
+  color: #79d1c3;
   font-size: 30px;
   line-height: 26px;
   font-weight: 400;
@@ -24,4 +24,20 @@ ul {
   border: 2px solid #79d1c3;
   border-radius: 4px;
   background: #f8fcfb;
+}
+.overview {
+  margin-bottom: 30px;
+}
+.weather-temperature img {
+  margin-right: 10px;
+}
+#temperature {
+  font-size: 60px;
+  line-height: 1;
+  font-weight: 200;
+}
+.units {
+  position: relative;
+  font-size: 15px;
+  top: -30px;
 }
