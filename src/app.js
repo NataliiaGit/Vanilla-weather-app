@@ -41,7 +41,20 @@ function displayTemperature(response) {
   );
 }
 
-let apiUrl =
-  "https://api.shecodes.io/weather/v1/current?query=Madrid&key=o8da94538210e4d3f40a1336t5f0ebb4&units=metric";
+function search(city) {
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=o8da94538210e4d3f40a1336t5f0ebb4&units=metric`;
 
-axios.get(apiUrl).then(displayTemperature);
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+  console.log(cityInputElement.value);
+}
+
+search("New York");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
